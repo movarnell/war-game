@@ -8,7 +8,8 @@ After all cards have been played, display the score and declare the winner.
 Write a Unit Test using Mocha and Chai for at least one of the functions you write. 
 */ 
 
-// Creating the deck
+// The following code creates the deck using the suits, and ranks arrays and putting them with the 
+// suit, rank, and value properties. 
 let suits = ['Hearts', 'Clubs', 'Diamonds', 'Spades']
 let ranks = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King', 'Ace']
 let deck = [];
@@ -25,26 +26,32 @@ for (i = 0; i < suits.length; i++) {
     ;
     }
 }
-// Shuffling the deck
 
+// The following function will shuffle the deck for us. 
 function shuffle(deck){
     deck.sort(() => Math.random() -0.5);
 }
 shuffle(deck);
 console.log(deck)
 
+// The following two variable declarations will split our shuffled deck into a half deck
+// for each player
 let player1Deck = deck.slice(0, 26);
 console.log(player1Deck);
 let player2Deck = deck.slice(26, 52);
 console.log(player2Deck);
 
+// The below variables are for each players score calculation, and the last variable
+// is used as way to edit each string based off the winner
 let player1Score = 0;
 let player2Score = 0;
 let handWinner = "";
 
 // Now we are ready for WAR!
-
-for (i = 0; i <= 26; i++){
+// using the following for loop we use our if, else if, and else logic to determine which card
+// value is greater and who wins the hand. It then assigns the string based off this to the handWinner variable
+// and will increment the scores.
+for (i = 0; i < 26; i++){
  if(player1Deck[i].value > player2Deck[i].value) {
     player1Score += 1;
     handWinner = "Player 1";
@@ -55,6 +62,7 @@ for (i = 0; i <= 26; i++){
     handWinner = "TIE, NO POINTS AWARDED"; 
  }
 
+ // now that the winner of this hand has been determined we need to print the results. 
  console.log(`
 Round: ${i + 1}
  Player 1 plays: ${player1Deck[i].rank} of ${player1Deck[i].suit}
@@ -64,6 +72,17 @@ Round: ${i + 1}
  Player 2: ${player2Score}
  `)
 }
+// so we have printed each hand throughout the game, we now need to show the winner based off the greater score. 
+// the following if, else if, else statment to print the text based off these results.
 
+    if (player1Score > player2Score) {
+        handWinner = `Player 1 WINS with a score of ${player1Score}`
+    } else if (player2Score > player1Score) {
+        handWinner = `Player 2 WINS with a score of ${player2Score}`
+    } else {
+        handWinner = `Tie Game, Player 1 score was ${player1Score} and Player 2 score was ${player2Score} 
+        Therefore no clear winner could be determined in this war of attrition.`
+    }
 
+console.log(handWinner);
 
