@@ -32,11 +32,11 @@ class CreateDeck {
         deck.sort(() => Math.random() -0.5);
         return deck;
     }
-
-
 }
 // uses the class to create the shuffled deck
 let deck = new CreateDeck;
+let deck2 = new CreateDeck;
+console.log(deck2);
 // console logs out the created deck to verify that it is 52 items long, and that they are shuffled (this was not required
 // but is handy for me in making sure the changes are validated and that Mocha and Chai are properly coded as well.)
 console.log(deck);
@@ -74,6 +74,8 @@ Round: ${i + 1}
  Player 1 plays: ${player1Deck[i].rank} of ${player1Deck[i].suit}
  Player 2 plays: ${player2Deck[i].rank} of ${player2Deck[i].suit}
  Winner is ${handWinner} 
+ 
+ CURRENT SCORE STANDS AT:
  Player 1: ${player1Score} 
  Player 2: ${player2Score}
  `);
