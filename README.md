@@ -1,8 +1,8 @@
-# 🌈 Project Title 🌈
+# ♠️♣️ War Game Project ♥️♦️
 
 ## 📝 Description 📝
 
-This project is a front-end web application built using HTML, CSS, and JavaScript. It includes a test suite.
+This project is a front-end web application built using HTML, CSS, and JavaScript. It includes a test suite. It runs in the console with no user interaction needed. It is using OOP and was a Week 6 Project for the Promineo Tech Front End Bootcamp.
 
 ## 🛠️ Technologies Used 🛠️
 
