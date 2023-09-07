@@ -1,4 +1,4 @@
-# ♠️♣️ War Game Project ♥️♦️
+# ♠️♥️ War Game Project ♣️♦️
 
 ## 📝 Description 📝
 
