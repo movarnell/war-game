@@ -16,7 +16,7 @@ describe('CreateDeck()', function() {
         })
     })
     })
-    
+    // NOTE - showing how these work
     describe('verify deck contains cards with proper properties', function() {
         it('should contain the property "suit"', function() {
             let deck = new CreateDeck();

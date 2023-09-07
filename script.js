@@ -1,4 +1,4 @@
-/*    Author: Michael Varnell. michaelvarnell@icloud.com
+/* REVIEW    Author: Michael Varnell. michaelvarnell@icloud.com
 Week 6 Coding Project "WAR!". Create a automated version of the classic card game WAR!. 
 There are many versions but for ours it will only have two players. You do not need to do anything special when 
 there is a tie in a round.
@@ -94,6 +94,6 @@ Round: ${i + 1}
     }
 
 console.log(handWinner);
-
+// STUB This is the end
 
 
