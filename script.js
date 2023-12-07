@@ -10,7 +10,7 @@ Write a Unit Test using Mocha and Chai for at least one of the functions you wri
 */ 
 
 
-class CreateDeck {
+class CreateDeck { 
     // this portion of the class creates the array of cards with the properties I wanted to use for the code. 
     constructor() {
         let suits = ['Hearts', 'Clubs', 'Diamonds', 'Spades'];
@@ -57,6 +57,7 @@ let handWinner = "";
 // using the following for loop we use our if, else if, and else logic to determine which card
 // value is greater and who wins the hand. It then assigns the string based off this to the handWinner variable
 // and will increment the scores.
+// ---------FOR LOOP TO PLAY THE GAME STARTS HERE -----------
 for (i = 0; i < 26; i++){
  if(player1Deck[i].value > player2Deck[i].value) {
     player1Score += 1;
@@ -80,9 +81,13 @@ Round: ${i + 1}
  Player 2: ${player2Score}
  `);
 }
+
+// ---------FOR LOOP TO PLAY THE GAME ENDS HERE -----------
+
 // so we have printed each hand throughout the game, we now need to show the winner based off the greater score. 
 // the following if, else if, else statment to print the text based off these results.
-
+console.log("player 1: " + player1Score);
+console.log("player 2: " + player2Score);
     if (player1Score > player2Score) {
         handWinner = `Player 1 WINS with a score of ${player1Score}`
     } else if (player2Score > player1Score) {
